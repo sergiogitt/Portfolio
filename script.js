@@ -1,11 +1,8 @@
-var cursorPositionElement = document.getElementById("cursorPosition");
-
 function updateCursorPosition(event) {
   let x = event.clientX; // Posición X del cursor
   let y = event.clientY; // Posición Y del cursor
   let backgroundStyle = "radial-gradient(600px at " + x + "px " + y + "px, rgba(29, 78, 216, 0.15), transparent 90%)";
   document.body.style.background = backgroundStyle; // Cambiar el fondo del body
-  cursorPositionElement.innerHTML = "Posición del cursor: (" + x + ", " + y + ")";
 }
 
 // Agregar un evento de escucha al elemento o a toda la página

@@ -52,6 +52,17 @@ html {
 #static a{
     text-decoration: none;
 }
+#static a i:hover{
+    cursor: pointer;
+    color: #C5D1EC;
+}
+#static a i{
+    margin: 1rem;
+    font-size: 2rem;
+}
+#static>#contacto{
+margin-top: auto;
+}
 .line{
     border: 1px solid #7889A7;
     width: 2rem;
@@ -89,7 +100,7 @@ ul li:hover .line {
     font-size: 16pt;
 }
 section{
-    padding-top: 4rem;
+    padding-top: 6rem;
 }
 #presentacion>div>p{
     margin: 1rem;
@@ -134,16 +145,20 @@ section{
     width: 80%;
     padding: 1rem;
     border-radius: 0.7rem;
+    transition: opacity 0.5s;
     
 }
 .enfocado{
     background-color: #162649;
+    
     border-top: 1px solid rgba(230, 229, 229, 0.5); /* Borde superior más claro */
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
-.desenfocado{
-    opacity: 40%;
+.desenfocado {
+    
+    opacity: 0.4; 
 }
+
 .enfoca-titulo{
     color: #5ce6d1 !important;
 }
