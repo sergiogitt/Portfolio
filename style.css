@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: transparent;
+    color: #7889A7;
+    font-family: 'Kalinga', sans-serif;
+}
+
+html {
+    background-color: #0F172A;
+
+}
+
+#content {
+    margin-left: 50%;
+    background: transparent;
+}
+
+#static {
+    position: fixed;
+    top: 20%;
+    left: 25%;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    /* Además, puedes agregar otros estilos como tamaño, fondo, etc. */
+    width: 50%;
+    height: 200px;
+    padding: 3%;
+}
+#static>*{
+    margin: 2rem;
+}
+#static>ul>li{
+    display: flex;
+    flex-direction: row;
+align-items: center;
+cursor: pointer;
+}
+#static>ul>li:hover a{
+    color: white;
+    transition:color 1s
+}
+.line{
+    border: 1px solid #7889A7;
+    width: 2rem;
+    height: 1px;
+    margin-right: 0.7rem;
+    transition: width 0.2s ease;
+}
+
+  
+  #static>ul>li .line {
+    border: 1px solid #7889A7; /* Borra la línea para empezar */
+    transition: border 0.2s ease, width 0.5s ease; /* Transición para el borde y el ancho */
+  }
+  
+  #static>ul>li:hover .line {
+    border: 1px solid white; /* Cambia el color del borde cuando el cursor está sobre el elemento <li> */
+    width: 3rem; /* Cambia el ancho de la línea cuando el cursor está sobre el elemento <li> */
+  }
+ul li:hover .line {
+    width: 3rem; /* Ancho al 100% cuando se pasa el cursor por encima */
+    transition: width 0.5s ease;
+}
