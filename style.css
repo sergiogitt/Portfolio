@@ -31,6 +31,9 @@ html {
 #static>*{
     margin: 2rem;
 }
+#static h2{
+    color: white;
+}
 #static>ul>li{
     display: flex;
     flex-direction: row;
@@ -46,14 +49,25 @@ cursor: pointer;
     width: 2rem;
     height: 1px;
     margin-right: 0.7rem;
-    transition: width 0.2s ease;
+    transition: width 0.4s ease;
 }
+.linea-chica{
+    border:1px solid #7889A7;
+    width: 2rem;
 
+}
+.linea-grande{
+    border:1px solid white;
+    width: 3rem;
+}
+.letra-chica{
+    color:#7889A7;
+}
+.letra-grande{
+    color:white;
+}
   
-  #static>ul>li .line {
-    border: 1px solid #7889A7; /* Borra la línea para empezar */
-    transition: border 0.2s ease, width 0.5s ease; /* Transición para el borde y el ancho */
-  }
+  
   
   #static>ul>li:hover .line {
     border: 1px solid white; /* Cambia el color del borde cuando el cursor está sobre el elemento <li> */
