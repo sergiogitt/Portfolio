@@ -20,14 +20,16 @@ html {
 
 #static {
     position: fixed;
-    top: 20%;
     left: 25%;
     background: transparent;
     transform: translate(-50%, -50%);
     /* Además, puedes agregar otros estilos como tamaño, fondo, etc. */
     width: 50%;
-    height: 200px;
     padding: 3%;
+    height: 100vh;
+    top: 50vh;
+    display: flex;
+    flex-direction: column;
 }
 #static>*{
     margin: 2rem;
@@ -39,8 +41,9 @@ html {
 #static>ul>li{
     display: flex;
     flex-direction: row;
-align-items: center;
-cursor: pointer;
+    align-items: center;
+    cursor: pointer;
+    margin: 1rem;
 }
 #static>ul>li:hover a{
     color: white;
