@@ -1,22 +1,17 @@
-    // Obtener el elemento en el que queremos mostrar la posición del cursor
-    var cursorPositionElement = document.getElementById("cursorPosition");
+var cursorPositionElement = document.getElementById("cursorPosition");
 
-    // Función para actualizar la posición del cursor
-    function updateCursorPosition(event) {
-      var x = event.clientX; // Posición X del cursor
-      var y = event.clientY; // Posición Y del cursor
-      var backgroundStyle = "radial-gradient(600px at "+x+"px "+y+"px, rgba(29, 78, 216, 0.15), transparent 80%)";
-      var body = document.body;
-// Aplica el estilo al fondo del <body>
-        body.style.background = backgroundStyle;
-      
-      // Actualizar el contenido del elemento con la posición del cursor
-      cursorPositionElement.innerHTML = "Posición del cursor: (" + x + ", " + y + ")";
-    }
+function updateCursorPosition(event) {
+  let x = event.clientX; // Posición X del cursor
+  let y = event.clientY; // Posición Y del cursor
+  let backgroundStyle = "radial-gradient(600px at " + x + "px " + y + "px, rgba(29, 78, 216, 0.15), transparent 90%)";
+  document.body.style.background = backgroundStyle; // Cambiar el fondo del body
+  cursorPositionElement.innerHTML = "Posición del cursor: (" + x + ", " + y + ")";
+}
 
-    // Agregar un evento de escucha al elemento o a toda la página
-    document.addEventListener("mousemove", updateCursorPosition);
-    var lineElements = document.querySelectorAll("#static>ul>li");
+// Agregar un evento de escucha al elemento o a toda la página
+document.addEventListener("mousemove", updateCursorPosition);
+
+    
 
 
 function agrandar(element){
@@ -31,6 +26,7 @@ function achicar(element){
     element.lastChild.style.color = "#7889A7";
     element.lastChild.style.color="#7889A7";
 }
+var lineElements = document.querySelectorAll("#static>ul>li");
 // Agrega un evento de clic a cada elemento <li> con la clase "line"
 lineElements.forEach(function(element) {
   element.addEventListener("click", function(indexo) {
@@ -48,9 +44,6 @@ lineElements.forEach(function(element) {
             
         }
     })
-   
-    // Aplica los estilos al hacer clic
-    
   });
   
 
@@ -76,3 +69,56 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+var imagenesTecnologias = document.querySelectorAll("#tecnologias>div");
+imagenesTecnologias.forEach(function(element){
+    element.addEventListener("mouseover",function(){
+        let src=element.children[0].getAttribute("src");
+        var extension = src.split('.');
+        var nuevoSRC=extension[0]+"-hover."+extension[1];
+        console.log(nuevoSRC);
+
+        element.children[0].setAttribute("src", nuevoSRC);
+    });
+})
+imagenesTecnologias.forEach(function(element){
+    element.addEventListener("mouseout",function(){
+        let src=element.children[0].getAttribute("src");
+        var extension = src.split('-hover.');
+        var nuevoSRC=extension[0]+"."+extension[1];    
+        element.children[0].setAttribute("src", nuevoSRC);
+    })
+})
+var proyectos = document.querySelectorAll("#proyectos>.project-wrapper>a");
+console.log(proyectos);
+proyectos.forEach(function(element){
+    element.addEventListener("mouseover",function(){
+        proyectos.forEach(function(element2){
+            
+            console.log();
+            if(element==element2){
+                element2.classList.add("enfocado")
+                element2.children[1].children[0].classList.add("enfoca-titulo");
+
+            }else{
+                element2.classList.add("desenfocado")
+
+            }
+        })
+        
+    })
+})
+proyectos.forEach(function(element){
+    element.addEventListener("mouseout",function(){
+        proyectos.forEach(function(element2){
+                element2.classList.remove("enfocado")
+                element2.classList.remove("desenfocado")
+                element2.children[1].children[0].classList.remove("enfoca-titulo");
+            
+        })
+        
+    })
+})
+
+
+
+
