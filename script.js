@@ -72,8 +72,6 @@ imagenesTecnologias.forEach(function(element){
         let src=element.children[0].getAttribute("src");
         var extension = src.split('.');
         var nuevoSRC=extension[0]+"-hover."+extension[1];
-        console.log(nuevoSRC);
-
         element.children[0].setAttribute("src", nuevoSRC);
     });
 })
@@ -85,14 +83,10 @@ imagenesTecnologias.forEach(function(element){
         element.children[0].setAttribute("src", nuevoSRC);
     })
 })
-var proyectos = document.querySelectorAll("#proyectos>.project-wrapper>a");
-console.log(proyectos);
-proyectos.forEach(function(element){
+var proyectos = document.querySelectorAll("#proyectos>.project-wrapper>a");proyectos.forEach(function(element){
     element.addEventListener("mouseover",function(){
         proyectos.forEach(function(element2){
-            
-            console.log();
-            if(element==element2){
+                        if(element==element2){
                 element2.classList.add("enfocado")
                 element2.children[1].children[0].classList.add("enfoca-titulo");
 

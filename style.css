@@ -49,19 +49,22 @@ html {
     color: white;
     transition:color 1s
 }
-#static a{
+.contacto a{
     text-decoration: none;
 }
-#static a i:hover{
+.contacto a i:hover{
     cursor: pointer;
     color: #C5D1EC;
 }
-#static a i{
+.contacto a i{
     margin: 1rem;
     font-size: 2rem;
 }
-#static>#contacto{
+#static .contacto{
 margin-top: auto;
+}
+#content .contacto{
+    display: none;
 }
 .line{
     border: 1px solid #7889A7;
@@ -96,11 +99,22 @@ ul li:hover .line {
     width: 3rem; /* Ancho al 100% cuando se pasa el cursor por encima */
     transition: width 0.5s ease;
 }
+ul li a {
+    text-decoration: none;
+}
 #content{
     font-size: 16pt;
 }
 section{
     padding-top: 6rem;
+}
+section>h4{
+    display: none;
+    color: #E2E8F0;
+    margin-bottom: 0.7rem;
+}
+#tecnologias>h4{
+    width: 100%;
 }
 #presentacion>div>p{
     margin: 1rem;
@@ -142,7 +156,7 @@ section{
 .project-wrapper>a{
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 90%;
     padding: 1rem;
     border-radius: 0.7rem;
     transition: opacity 0.5s;
@@ -163,7 +177,7 @@ section{
     color: #5ce6d1 !important;
 }
 .project-wrapper img{
-    max-width: 20%;
+    max-width: 28%;
     height: auto;
     
 }
@@ -178,3 +192,34 @@ section{
     color: #a7adb8;
     margin-bottom: 0.3rem;
 }
+@media (max-width: 968px) {
+    #static{
+        display: none;
+    }
+    
+    #content{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    section:first-child{
+        padding-top: 3rem;
+    }
+    section>h4{
+        display: block;
+    }
+    #tecnologias .borde{
+        margin: 1rem 0;
+    }
+    #content div.contacto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+    .project-wrapper a{
+        width: 90%;
+    }
+    .project-wrapper img{
+        max-width: 20%;        
+    }
+  }
