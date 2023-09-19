@@ -17,6 +17,14 @@ html {
     background: transparent;
     margin-right: 10%;
 }
+.hiperenlace{
+    color: #E2E8F0;
+    text-decoration: none;
+}
+.hiperenlace:hover{
+    color: #5ce6d1;
+}
+
 
 #static {
     position: fixed;
@@ -178,7 +186,6 @@ section>h4{
 }
 .project-wrapper img{
     max-width: 28%;
-    height: auto;
     
 }
 .project-wrapper a{
@@ -241,6 +248,6 @@ section>h4{
         width: 90%;
     }
     .project-wrapper img{
-        max-width: 20%;        
+        max-width: 35%;        
     }
   }

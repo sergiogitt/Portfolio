@@ -117,8 +117,9 @@ function elementoEnPantalla() {
 const proyectosElement = document.getElementById("proyectos");
   const presentacionElement = document.getElementById("presentacion");
   const tecnologiasElement = document.getElementById("tecnologias");
+  const herramientasElement = document.getElementById("herramientas");
   const windowHeight = window.innerHeight;
-  const umbral = windowHeight * 0.55;
+  const umbral = windowHeight * 0.65;
   let comparador;
 
   // Verificar la posición de cada elemento y guardar el que está por encima del umbral
@@ -136,6 +137,10 @@ const proyectosElement = document.getElementById("proyectos");
   if (proyectosElement.getBoundingClientRect().top < umbral) {
     elementoVisible = proyectosElement;
     comparador="Proyectos";
+  }
+  if (herramientasElement.getBoundingClientRect().top < umbral) {
+    elementoVisible = proyectosElement;
+    comparador="Herramientas";
   }
 
   
