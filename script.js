@@ -109,22 +109,54 @@ proyectos.forEach(function(element){
         
     })
 })
-// Obtén una referencia al elemento por su ID
-const elemento = document.getElementById("proyectos");
+
+
+
 function elementoEnPantalla() {
-  const elementoTop = elemento.getBoundingClientRect().top;
+// Obtén una referencia al elemento por su ID
+const proyectosElement = document.getElementById("proyectos");
+  const presentacionElement = document.getElementById("presentacion");
+  const tecnologiasElement = document.getElementById("tecnologias");
   const windowHeight = window.innerHeight;
-  const umbral = windowHeight * 0.75;
-  if (elementoTop < umbral) {
-    console.log("El elemento está en la pantalla.");
-  } else {
-    console.log("El elemento no está en la pantalla.");
+  const umbral = windowHeight * 0.55;
+  let comparador;
+
+  // Verificar la posición de cada elemento y guardar el que está por encima del umbral
+ 
+  if (presentacionElement.getBoundingClientRect().top < umbral) {
+    elementoVisible = presentacionElement;
+    comparador="Presentación";
+
   }
+  if (tecnologiasElement.getBoundingClientRect().top < umbral) {
+    elementoVisible = tecnologiasElement;
+    comparador="Tecnologías";
+
+  }
+  if (proyectosElement.getBoundingClientRect().top < umbral) {
+    elementoVisible = proyectosElement;
+    comparador="Proyectos";
+  }
+
+  
+    lineElements.forEach(function(element2){
+        if(comparador==element2.lastChild.textContent){
+            element2.firstChild.classList.add("linea-grande");
+            element2.firstChild.classList.remove("linea-chica");
+            element2.lastChild.classList.add("letra-grande")
+            element2.lastChild.classList.remove("letra-chica")
+        }else{
+            element2.firstChild.classList.add("linea-chica");
+            element2.lastChild.classList.add("letra-chica")
+            element2.firstChild.classList.remove("linea-grande");
+            element2.lastChild.classList.remove("letra-grande")
+            
+        }
+    })
+  
 }
 window.addEventListener("scroll", elementoEnPantalla);
 
-// Llama a la función inicialmente para verificar el estado inicial
-elementoEnPantalla();
 
 
 

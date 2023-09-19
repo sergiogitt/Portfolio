@@ -192,6 +192,27 @@ section>h4{
     color: #a7adb8;
     margin-bottom: 0.3rem;
 }
+#herramientas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.herramienta{
+    background-color: #2e3f63;
+    border-top: 1px solid rgba(230, 229, 229, 0.5); /* Borde superior más claro */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    height: 3rem;
+    width: max-content;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.2rem;
+}
+.herramienta img{
+    max-width: 100%;
+    width: auto;
+}
 @media (max-width: 968px) {
     #static{
         display: none;
