@@ -110,6 +110,28 @@ ul li:hover .line {
 ul li a {
     text-decoration: none;
 }
+#curriculum a{
+    text-decoration: none;
+    margin-right: 1rem;
+}
+#curriculum >div{
+    display: flex;
+    justify-content: center;
+}
+#curriculum>div:hover a,#curriculum>div:hover i{
+    color: #5ce6d1;
+}
+#curriculum > div i {
+    transition: transform 0.3s ease; /* Transición para el ícono en su estado normal */
+}
+
+#curriculum > div:hover i {
+    transform: translateY(10px); /* Mover hacia abajo al hacer hover */
+}
+
+#curriculum > div i:hover {
+    transform: translateY(0); /* Volver a la posición inicial al quitar el hover */
+}
 #content{
     font-size: 16pt;
 }
