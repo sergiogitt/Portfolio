@@ -109,6 +109,23 @@ proyectos.forEach(function(element){
         
     })
 })
+// Obtén una referencia al elemento por su ID
+const elemento = document.getElementById("proyectos");
+function elementoEnPantalla() {
+  const elementoTop = elemento.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+  const umbral = windowHeight * 0.75;
+  if (elementoTop < umbral) {
+    console.log("El elemento está en la pantalla.");
+  } else {
+    console.log("El elemento no está en la pantalla.");
+  }
+}
+window.addEventListener("scroll", elementoEnPantalla);
+
+// Llama a la función inicialmente para verificar el estado inicial
+elementoEnPantalla();
+
 
 
 
