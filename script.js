@@ -28,7 +28,7 @@ var lineElements = document.querySelectorAll("#static>ul>li");
 lineElements.forEach(function(element) {
   element.addEventListener("click", function(indexo) {
     lineElements.forEach(function(element2){
-        if(element==element2){
+        if(element===element2){
             element2.firstChild.classList.add("linea-grande");
             element2.firstChild.classList.remove("linea-chica");
             element2.lastChild.classList.add("letra-grande")
@@ -66,27 +66,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
-var imagenesTecnologias = document.querySelectorAll("#tecnologias>div");
-imagenesTecnologias.forEach(function(element){
-    element.addEventListener("mouseover",function(){
-        let src=element.children[0].getAttribute("src");
-        var extension = src.split('.');
-        var nuevoSRC=extension[0]+"-hover."+extension[1];
-        element.children[0].setAttribute("src", nuevoSRC);
-    });
-})
-imagenesTecnologias.forEach(function(element){
-    element.addEventListener("mouseout",function(){
-        let src=element.children[0].getAttribute("src");
-        var extension = src.split('-hover.');
-        var nuevoSRC=extension[0]+"."+extension[1];    
-        element.children[0].setAttribute("src", nuevoSRC);
-    })
-})
 var proyectos = document.querySelectorAll("#proyectos>.project-wrapper>a");proyectos.forEach(function(element){
     element.addEventListener("mouseover",function(){
         proyectos.forEach(function(element2){
-                        if(element==element2){
+                        if(element===element2){
                 element2.classList.add("enfocado")
                 element2.children[1].children[0].classList.add("enfoca-titulo");
 
@@ -145,7 +128,7 @@ const proyectosElement = document.getElementById("proyectos");
 
   
     lineElements.forEach(function(element2){
-        if(comparador==element2.lastChild.textContent){
+        if(comparador===element2.lastChild.textContent){
             element2.firstChild.classList.add("linea-grande");
             element2.firstChild.classList.remove("linea-chica");
             element2.lastChild.classList.add("letra-grande")

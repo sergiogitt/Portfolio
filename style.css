@@ -154,6 +154,16 @@ section>h4{
 #tecnologias>h4{
     width: 100%;
 }
+#tecnologias img{
+    filter: grayscale(100%);
+    transition: all 0.5s;
+}
+#tecnologias div.borde{
+    transition: all 0.5s;
+}
+#tecnologias .borde:hover img{
+    filter: grayscale(0%);
+}
 #presentacion>div>p{
     margin: 1rem;
 }
@@ -180,6 +190,7 @@ section>h4{
 }
 #tecnologias .borde:hover{
     background-color: white;
+    border: 3px solid #5ce6d1;
 }
 #tecnologias img{
    max-width: 80%;
